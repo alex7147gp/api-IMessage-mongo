@@ -7,22 +7,18 @@ const router = express.Router()
 
 const multer = require("multer");
 
-const fs = require("fs");
+const os = require("os");
 
-const storage = () => {
-  if (!fs.existsSync("public")) {
-    fs.mkdirSync("public");
+const storage = multer.diskStorage({
+  destination: os.tmpdir(),
+  filename: function (req, file, cb) {
+    cb(null, file.originalname)
   }
-  multer.diskStorage({
-    destination: "public/files/",
-    filename: function (req, file, cb) {
-      cb(null, file.originalname)
-    }
-  });
-}
+});
+
 
 const upload = multer({
-  storage: storage()
+  storage: storage
 });
 
 router.get("/", (req, res) => {

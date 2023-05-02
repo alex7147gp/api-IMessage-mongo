@@ -1,0 +1,21 @@
+[
+  {
+    "_id": "a566996e-1cc1-486b-aaad-335ebecd8bb0",
+    "colId": "history",
+    "containerId": "",
+    "name": "https://localhost:3000/api/v1/message",
+    "url": "http://localhost:3000/api/v1/message",
+    "method": "GET",
+    "sortNum": 0,
+    "created": "2023-04-23T22:16:47.337Z",
+    "modified": "2023-04-24T21:37:04.283Z",
+    "headers": [],
+    "params": [],
+    "body": {
+      "type": "json",
+      "raw": "{\n  \"user\": \"john123\",\n  \"message\": \"this is a message\"\n}",
+      "form": []
+    },
+    "tests": []
+  }
+]
